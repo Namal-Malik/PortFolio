@@ -1,0 +1,120 @@
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { background-color: #F1F3F7; font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: #222; }
+
+/* Theme */
+:root{
+  --primary:#3B5BDB; /* indigo */
+  --primary-700:#2743b5;
+  --accent:#2EC4B6; /* teal accent */
+  --bg:#0b1220;
+  --bg-soft:#0f1730;
+  --text:#e8ebf5;
+  --muted:#98a2b3;
+  --gradient: linear-gradient(135deg, #3b5bdb 0%, #7b61ff 50%, #ff6ec7 100%);
+}
+.bg-dark-hero{ background: radial-gradient(1200px 600px at 10% -10%, rgba(43,109,243,.25), transparent), radial-gradient(1200px 600px at 110% 10%, rgba(255,110,199,.2), transparent), var(--bg); color: var(--text); }
+.gradient-text{ background: var(--gradient); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.accent{ color: var(--primary); }
+
+/* Main hero */
+.main { min-height: 80vh; display: flex; align-items: center; justify-content: center; text-align: left; }
+.main-heading { font-weight: 900; line-height: 1.3; }
+.highlight-text { color: var(--primary); }
+.sub-heading { font-weight: 300; color: #555; }
+.text { margin-bottom: 1.5rem; font-size: 1.1rem; color: #555; }
+
+/* Buttons */
+.work-btn { background: var(--primary) !important; border-color: var(--primary) !important; color: #fff !important; padding: 10px 20px; border-radius: 10px; }
+.contact-btn { background-color: #ffffff; border: 1px solid #cfd6ff; color: #1f338b; padding: 10px 20px; border-radius: 8px; transition: all .3s ease; }
+.contact-btn:hover { background-color: var(--primary) !important; color: #fff !important; border-color: var(--primary) !important; }
+.shadow-fade { box-shadow: 0 4px 10px rgba(0,0,0,.15); transition: all .3s ease; }
+.shadow-fade:hover { box-shadow: 0 6px 20px rgba(0,0,0,.25); }
+
+/* Utilities */
+.py-5 { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+.mb-2 { margin-bottom: .5rem !important; }
+.mb-3 { margin-bottom: 1rem !important; }
+.mb-4 { margin-bottom: 1.5rem !important; }
+.me-2 { margin-right: .5rem !important; }
+
+/* Pills and badges */
+.pill{ display:inline-block; padding:.5rem .75rem; border-radius:999px; border:1px solid rgba(255,255,255,.15); background: rgba(255,255,255,.06); color: var(--text); font-weight:600; }
+
+/* Project cards */
+.project-card { border: none; border-radius: 14px; transition: transform .2s ease, box-shadow .2s ease; overflow:hidden; }
+.project-card:hover { transform: translateY(-4px); box-shadow: 0 16px 34px rgba(0,0,0,.18); }
+
+/* Hero image */
+.hero-portrait{ width:100%; max-width:420px; aspect-ratio:1/1; border-radius:18px; background: radial-gradient(200px 200px at 70% 10%, rgba(255,255,255,.25), transparent), var(--bg-soft); border:1px solid rgba(255,255,255,.08); box-shadow: 0 20px 40px rgba(0,0,0,.35); }
+
+/* Footer */
+footer{ background: #0e162b; color: var(--text); }
+footer a{ color:#c9d7ff; text-decoration:none; }
+footer a:hover{ color:#ffffff; }
+
+/* Navbar polish */
+.navbar.bg-body-tertiary{ background: rgba(255,255,255,.85) !important; backdrop-filter: blur(8px); border-bottom:1px solid rgba(40,64,175,.12); }
+
+/* Navbar brand logo */
+.navbar-brand{ 
+  font-size: 1.5rem; 
+  font-weight: 900; 
+  background: var(--gradient); 
+  -webkit-background-clip: text; 
+  background-clip: text; 
+  color: transparent; 
+  text-decoration: none; 
+  letter-spacing: -0.5px; 
+  position: relative;
+  transition: all 0.3s ease;
+}
+.navbar-brand:hover{ 
+  transform: scale(1.05); 
+  filter: brightness(1.1);
+}
+.navbar-brand::before{ 
+  content: "💻"; 
+  margin-right: 8px; 
+  font-size: 1.2rem; 
+  filter: grayscale(0.3);
+}
+
+/* Soft cards, chips, icons */
+.soft-card{ border:1px solid rgba(0,0,0,.06); border-radius:16px; box-shadow: 0 6px 18px rgba(0,0,0,.06); transition: box-shadow .25s ease, transform .25s ease; background:#fff; }
+.soft-card:hover{ box-shadow: 0 14px 34px rgba(0,0,0,.12); transform: translateY(-2px); }
+.contact-card{ border:1px solid rgba(40,64,175,.12); border-radius:18px; background: linear-gradient(180deg, #ffffff 0%, #f6f8ff 100%); box-shadow: 0 18px 40px rgba(40,64,175,.12); }
+.logo-mark{ width:64px; height:64px; border-radius:14px; display:flex; align-items:center; justify-content:center; background: rgba(40,64,175,.1); color:#1f338b; box-shadow: 0 12px 30px rgba(40,64,175,.2); }
+.social-btn{ border:1px solid #dbe1ff; border-radius:10px; padding:.5rem 1rem; background:#fff; transition: transform .2s ease, box-shadow .2s ease; }
+.social-btn:hover{ transform: translateY(-2px); box-shadow: 0 10px 20px rgba(0,0,0,.1); }
+.social-btn.github{ color:#24292e; }
+.social-btn.linkedin{ color:#0a66c2; }
+.icon-circle{ width:56px; height:56px; border-radius:50%; display:flex; align-items:center; justify-content:center; background: rgba(40,64,175,.08); color:#1f338b; font-size:22px; box-shadow: 0 8px 24px rgba(40,64,175,.15); }
+.chip{ display:inline-block; padding:.3rem .6rem; border-radius:999px; background:#0b2a7a; color:#fff; font-size:.75rem; font-weight:600; }
+.chip-soft{ background:#e7edff; color:#1f338b; }
+.heading-accent{ color:#1f338b; }
+.skill-badge{ background:#eef2ff; color:#1f338b; border:1px solid #dde3ff; padding:.25rem .55rem; border-radius:999px; font-size:.8rem; font-weight:600; }
+
+/* Section headings */
+.section-title{ font-weight:900; margin-bottom:.25rem; }
+.section-title span{ color:#1f338b; }
+.section-sub{ color:#4d5a6d; }
+.section-title{ position:relative; display:inline-block; }
+.section-title::after{ content:""; display:block; height:4px; border-radius:2px; background: linear-gradient(90deg, var(--accent), var(--primary)); width:90px; margin:10px auto 0; }
+
+/* Section background tint */
+.bg-section{ background: linear-gradient(180deg, #f7f9ff 0%, #eff3ff 100%); }
+
+/* Progress bars */
+.prog-item{ margin-bottom:.75rem; }
+.prog{ width:100%; height:8px; background:#e9edf7; border-radius:999px; overflow:hidden; }
+.prog span{ display:block; height:100%; background:#1f338b; border-radius:999px; }
+
+/* Simple reveal animation */
+.reveal{ opacity:0; transform: translateY(10px); animation: fadeUp .6s ease forwards; }
+.reveal-1{ animation-delay: .05s; }
+.reveal-2{ animation-delay: .15s; }
+.reveal-3{ animation-delay: .25s; }
+@keyframes fadeUp{ to{ opacity:1; transform: translateY(0);} }
+
